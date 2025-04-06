@@ -7,5 +7,7 @@ Proyecto Final de la maestría fullstack de la UCB - Backend - Gestor de Tareas 
 4 - instalar sequelize  -- npm install sequelize
 5 - instalar postgresql -- npm install pg pg-hstore
 6 - estructura sequelize-- npx sequelize-cli init
-7 - crear modelo usuario-- npx sequelize-cli model:generate --name Cliente --attributes nombre:string,correo:string,password:string
-
+7 - crear modelo usuario-- npx sequelize-cli model:generate --name Usuario --attributes nombre:string,correo:string,password:string
+8 - instalar jwt        -- npm install jsonwebtoken
+9 - instalar dotenv     -- npm install dotenv
+10- instalar bcryptjs   -- npm install bcryptjs

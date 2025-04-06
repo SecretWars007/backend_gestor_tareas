@@ -5,6 +5,9 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const authRoutes = require("./routes/authRoutes");
+// Carga las variables de entorno
+require('dotenv').config();
 
 var app = express();
 
@@ -16,5 +19,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use("/api/auth", authRoutes);
+
+const PORT = 3005;
+
+
+app.listen(PORT, () =>
+  console.log(`Servidor corriendo en http://localhost:${PORT}`)
+);
+
+
 
 module.exports = app;
