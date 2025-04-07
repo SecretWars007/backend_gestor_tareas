@@ -9,9 +9,16 @@ const authRoutes = require("./routes/authRoutes");
 const tareaRoutes = require("./routes/tareaRoutes");
 // Carga las variables de entorno
 require('dotenv').config();
+const cors = require('cors');
+// Configurar CORS
+const corsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
 
 var app = express();
-
+app.use(cors(corsOptions));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
