@@ -6,6 +6,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const authRoutes = require("./routes/authRoutes");
+const tareaRoutes = require("./routes/tareaRoutes");
 // Carga las variables de entorno
 require('dotenv').config();
 
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/api/auth", authRoutes);
+app.use("/api/tasks", tareaRoutes);
 
 const PORT = 3005;
 

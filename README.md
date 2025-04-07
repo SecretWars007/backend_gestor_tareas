@@ -11,3 +11,4 @@ Proyecto Final de la maestría fullstack de la UCB - Backend - Gestor de Tareas 
 8 - instalar jwt        -- npm install jsonwebtoken
 9 - instalar dotenv     -- npm install dotenv
 10- instalar bcryptjs   -- npm install bcryptjs
+11- crear modelo tareas -- npx sequelize-cli model:generate --name Tarea --attributes titulo:string,descripcion:string,estado:integer,fechaLimite:date,usuarioId:integer

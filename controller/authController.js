@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const { Usuario } = require("../models"); 
 
 // crear usuario
-exports.crearUsuario = async (req, res) => {
+exports.register = async (req, res) => {
   const { nombre, correo, password } = req.body;
   const usuario = await Usuario.findOne({
     where: { correo: correo },
@@ -41,6 +41,7 @@ exports.me = async (req, res) => {
     res.status(401).json({ message: "Token inválido o expirado" });
   }
 };
+
 // autenticar usuario
 exports.login = async (req, res) => {
   const { correo, password } = req.body;
