@@ -14,10 +14,17 @@
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "3445536",
+    "username": "postgress",
+    "password": "mrDWIATMc5DJej28Eu48mGD2mW8IqyZ8",
     "database": "bd_gestor_tareas",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "host": "dpg-cvt87fruibrs73df3qo0-a.oregon-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
   }
 }
+
