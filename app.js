@@ -12,14 +12,14 @@ require('dotenv').config();
 const cors = require('cors');
 // Configurar CORS
 const corsOptions = {
-  origin: ["http://localhost:5173","https://frontend-gestor-tareas-f5llkbs21-secretwars007s-projects.vercel.app/"],
+  origin: "https://frontend-gestor-tareas-f5llkbs21-secretwars007s-projects.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 };
 
 var app = express();
-app.use(cors({ origin: ["http://localhost:5173","https://frontend-gestor-tareas-f5llkbs21-secretwars007s-projects.vercel.app/"], credentials: true }));
+app.use(cors({ origin: "https://frontend-gestor-tareas-f5llkbs21-secretwars007s-projects.vercel.app", credentials: true }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
