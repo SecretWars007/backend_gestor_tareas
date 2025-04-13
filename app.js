@@ -19,7 +19,7 @@ const corsOptions = {
 };
 
 var app = express();
-app.use(cors({ origin: "https://frontend-gestor-tareas.vercel.app/", credentials: true }));
+app.use(cors({ origin: "*", credentials: true }));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
